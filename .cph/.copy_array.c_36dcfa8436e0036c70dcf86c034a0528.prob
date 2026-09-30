@@ -1,0 +1,1 @@
+{"name":"Local: copy_array","url":"/home/ih-sajjad/Desktop/Projects/C with Phitron/copy_array.c","tests":[{"id":1790786706066,"input":"5\n10 20 30 40 50\n4\n60 70 80 90","output":"10 20 30 40 50 60 70 80 90"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/ih-sajjad/Desktop/Projects/C with Phitron/copy_array.c","group":"local","local":true}

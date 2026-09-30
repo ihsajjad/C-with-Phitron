@@ -1,0 +1,1 @@
+{"name":"Local: string_copy","url":"/home/ih-sajjad/Desktop/Projects/C with Phitron/string_copy.c","tests":[{"id":1790787517900,"input":"bi bye","output":"bye bye"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/ih-sajjad/Desktop/Projects/C with Phitron/string_copy.c","group":"local","local":true}
