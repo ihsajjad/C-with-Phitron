@@ -2,17 +2,25 @@
 #include <string.h>
 #include <limits.h>
 
-int sum(int a, int b)
+void fun(int a[])
 {
-    return a + b;
+    a[1] = 300;
 }
 
 int main()
 {
-    int a, b;
-    scanf("%d %d", &a, &b);
+    int a[5] = {10, 20, 30, 40, 50};
 
-    printf("%d", sum(a, b));
+    // printf("%p- > %p\n", &a, &a[0]);
+    // printf("%p\n", &a[1]);
+    // printf("%p\n", &a[2]);
+    // printf("%p\n", &a[3]);
+    fun(a);
+
+    for (int i = 0; i < 5; i++)
+    {
+        printf("%d\n", a[i]);
+    }
 
     return 0;
 }
