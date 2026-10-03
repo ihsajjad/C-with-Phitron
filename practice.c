@@ -2,25 +2,26 @@
 #include <string.h>
 #include <limits.h>
 
-void fun(int a[])
+void print_array(int a[], int n, int i)
 {
-    a[1] = 300;
+    if (i == n)
+        return;
+    printf("%d ", a[i]);
+    print_array(a, n, i + 1);
 }
 
 int main()
 {
-    int a[5] = {10, 20, 30, 40, 50};
+    int n;
+    scanf("%d", &n);
+    int arr[n];
+    for (int i = 0; i < n; i++)
+        scanf("%d ", &arr[i]);
 
-    // printf("%p- > %p\n", &a, &a[0]);
-    // printf("%p\n", &a[1]);
-    // printf("%p\n", &a[2]);
-    // printf("%p\n", &a[3]);
-    fun(a);
+    // for (int i = 0; i < n; i++)
+    //     printf("%d ", arr[i]);
 
-    for (int i = 0; i < 5; i++)
-    {
-        printf("%d\n", a[i]);
-    }
+    print_array(arr, n, 0);
 
     return 0;
 }
