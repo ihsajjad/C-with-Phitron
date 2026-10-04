@@ -6,25 +6,23 @@ int main()
 {
     int n, m;
     scanf("%d %d", &n, &m);
-
     int arr[n][m];
+
     for (int i = 0; i < n; i++)
         for (int j = 0; j < m; j++)
             scanf("%d", &arr[i][j]);
 
-    if (n != m)
-    {
-        printf("Not Primary Diagonal");
-        return 0;
-    }
+    int x;
+    scanf("%d", &x);
 
-    bool flag = true;
+    bool flag = false;
+
     for (int i = 0; i < n; i++)
         for (int j = 0; j < m; j++)
-            if (i != j && arr[i][j] != 0)
-                flag = false;
+            if (arr[i][j] == x)
+                flag = true;
 
-    printf(flag ? "Primary Diagonal" : "Not Primary Diagonal");
+    printf(flag ? "will not take number" : "will take number");
 
     return 0;
 }
