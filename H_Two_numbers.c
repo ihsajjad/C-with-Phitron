@@ -5,16 +5,15 @@
 
 int main()
 {
-    int a, b;
-    scanf("%d %d", &a, &b);
-    // printf("%d", round(a / b));
+    float a, b;
+    scanf("%f %f", &a, &b);
 
     int fl = floor(a / b);
     int cl = ceil(a / b);
     int rn = round(a / b);
 
-    printf("floor %d / %d = %d\n", a, b, fl);
-    printf("ceil %d / %d = %d\n", a, b, cl);
-    printf("round %d / %d = %d\n", a, b, rn);
+    printf("floor %.0f / %.0f = %d\n", a, b, fl);
+    printf("ceil %.0f / %.0f = %d\n", a, b, cl);
+    printf("round %.0f / %.0f = %d\n", a, b, rn);
     return 0;
 }
