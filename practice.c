@@ -1,20 +1,40 @@
 #include <stdio.h>
 #include <string.h>
 #include <limits.h>
-#include <math.h>
 
 int main()
 {
-    float a, b;
-    scanf("%f %f", &a, &b);
-    // printf("%d", round(a / b));
+    int t;
+    scanf("%d", &t);
 
-    int fl = floor(a / b);
-    int cl = ceil(a / b);
-    int rn = round(a / b);
+    while (t--)
+    {
+        int n;
+        scanf("%d", &n);
 
-    printf("floor %f / %f = %.0lf\n", a, b, floor(a / b));
-    // printf("ceil %f / %f = %f\n", a, b, cl);
-    // printf("round %f / %f = %f\n", a, b, rn);
+        int arr[n];
+        for (int i = 0; i < n; i++)
+            scanf("%d", &arr[i]);
+
+        int i = 0, len = 1, cnt = 0;
+        while (len < n)
+        {
+            bool flag = true;
+            for (int j = i; j < i + len; j++)
+                if ((j + 1) < n && arr[j] > arr[j + 1])
+                    flag = false;
+
+            if (flag)
+                cnt++;
+
+            i++;
+
+            if (i == n - len)
+                len++, i = 0;
+        }
+
+        printf("%d\n", cnt + n);
+    }
+
     return 0;
 }
